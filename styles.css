@@ -5,9 +5,15 @@
 }
 
 .puzzle-piece {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     position: absolute;
+    border: 5px solid #000;
+    box-sizing: border-box;
+    line-height: 90px;
+    text-align: center;
+    font-size: 2em;
+    background-color: #ccc;
 }
 
 #shuffle-button {
