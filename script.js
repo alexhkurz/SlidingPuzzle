@@ -41,6 +41,9 @@ function movePiece(piece) {
     }
 }
 
+var dragging = false;
+var draggedPiece = null;
+
 document.addEventListener('DOMContentLoaded', function() {
     var container = document.getElementById('puzzle-container');
     for (var i = 0; i < 4; i++) {
@@ -50,12 +53,29 @@ document.addEventListener('DOMContentLoaded', function() {
             piece.textContent = puzzle[i][j] === 0 ? '' : puzzle[i][j];
             piece.style.left = (j * 100) + 'px';
             piece.style.top = (i * 100) + 'px';
-            piece.addEventListener('click', function() {
-                movePiece(this);
+            piece.addEventListener('mousedown', function(e) {
+                dragging = true;
+                draggedPiece = this;
+                e.preventDefault();
             });
             container.appendChild(piece);
         }
     }
+
+    container.addEventListener('mousemove', function(e) {
+        if (dragging) {
+            draggedPiece.style.left = e.pageX - container.offsetLeft - 50 + 'px';
+            draggedPiece.style.top = e.pageY - container.offsetTop - 50 + 'px';
+        }
+    });
+
+    container.addEventListener('mouseup', function() {
+        if (dragging) {
+            movePiece(draggedPiece);
+            dragging = false;
+            draggedPiece = null;
+        }
+    });
 });
 
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
