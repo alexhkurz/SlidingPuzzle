@@ -57,11 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
             piece.style.left = (j * 100) + 'px';
             piece.style.top = (i * 100) + 'px';
             piece.addEventListener('mousedown', function(e) {
-                if (movePiece(this)) {
-                    dragging = true;
-                    draggedPiece = this;
-                    e.preventDefault();
-                }
+                movePiece(this);
+                e.preventDefault();
             });
             container.appendChild(piece);
         }
