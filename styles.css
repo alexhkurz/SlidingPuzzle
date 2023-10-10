@@ -1,0 +1,15 @@
+#puzzle-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+#shuffle-button {
+    margin-top: 20px;
+}
