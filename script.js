@@ -38,8 +38,8 @@ function movePiece(piece) {
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
         piece.style.left = (emptyTilePosition.j * 100) + 'px';
         piece.style.top = (emptyTilePosition.i * 100) + 'px';
-        piece.textContent = '';
         document.querySelector(`.puzzle-piece:nth-child(${emptyTilePosition.i * 4 + emptyTilePosition.j + 1})`).textContent = pieceNumber;
+        piece.textContent = '';
         return true;
     }
 
