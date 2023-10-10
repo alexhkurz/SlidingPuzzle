@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
         for (var j = 0; j < 4; j++) {
             var piece = document.createElement('div');
             piece.classList.add('puzzle-piece');
-            piece.textContent = puzzle[i][j];
+            if (puzzle[i][j] === 0) {
+                piece.classList.add('blank-tile');
+            }
+            piece.textContent = puzzle[i][j] === 0 ? '' : puzzle[i][j];
             piece.style.left = (j * 100) + 'px';
             piece.style.top = (i * 100) + 'px';
             piece.addEventListener('mousedown', function(e) {
