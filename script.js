@@ -38,7 +38,10 @@ function movePiece(piece) {
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
         piece.style.left = (emptyTilePosition.j * 100) + 'px';
         piece.style.top = (emptyTilePosition.i * 100) + 'px';
+        return true;
     }
+
+    return false;
 }
 
 var dragging = false;
@@ -54,9 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
             piece.style.left = (j * 100) + 'px';
             piece.style.top = (i * 100) + 'px';
             piece.addEventListener('mousedown', function(e) {
-                dragging = true;
-                draggedPiece = this;
-                e.preventDefault();
+                if (movePiece(this)) {
+                    dragging = true;
+                    draggedPiece = this;
+                    e.preventDefault();
+                }
             });
             container.appendChild(piece);
         }
