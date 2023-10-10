@@ -33,7 +33,7 @@ function movePiece(piece) {
         }
     }
 
-    if (Math.abs(piecePosition.i - emptyTilePosition.i) ===1 && Math.abs(piecePosition.j - emptyTilePosition.j) === 1) {
+    if (Math.abs(piecePosition.i - emptyTilePosition.i) + Math.abs(piecePosition.j - emptyTilePosition.j) === 1) {
         puzzle[piecePosition.i][piecePosition.j] = 0;
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
         piece.style.left = (emptyTilePosition.j * 100) + 'px';
