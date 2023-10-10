@@ -1,7 +1,8 @@
 var puzzle = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 0]
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 0]
 ];
 
 function shufflePuzzle() {
@@ -14,8 +15,8 @@ function movePiece(piece) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var container = document.getElementById('puzzle-container');
-    for (var i = 0; i < 3; i++) {
-        for (var j = 0; j < 3; j++) {
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 4; j++) {
             var piece = document.createElement('div');
             piece.classList.add('puzzle-piece');
             piece.textContent = puzzle[i][j] === 0 ? '' : puzzle[i][j];
