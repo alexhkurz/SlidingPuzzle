@@ -130,6 +130,7 @@ function getParity(pieces) {
 function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
+    var blankTileRow = Math.floor(flatPuzzle.indexOf(16) / 4) + 1;
     for (var i = 0; i < flatPuzzle.length - 1; i++) {
         if (flatPuzzle[i] != 16) {
             for (var j = i + 1; j < flatPuzzle.length; j++) {
@@ -139,5 +140,5 @@ function getParity(puzzle) {
             }
         }
     }
-    return inversions % 2;
+    return (inversions + blankTileRow) % 2;
 }
