@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (puzzle[i][j] === 0) {
                 piece.classList.add('blank-tile');
             }
-            piece.textContent = puzzle[i][j] === 0 ? '' : puzzle[i][j];
+            piece.textContent = puzzle[i][j];
             piece.style.left = (j * 100) + 'px';
             piece.style.top = (i * 100) + 'px';
             piece.addEventListener('mousedown', function(e) {
