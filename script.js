@@ -2,6 +2,13 @@ var puzzle = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
+    [13, 14, 15, 0]
+];
+
+var puzzle14 = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
     [13, 15, 14, 0]
 ];
 
@@ -109,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
 document.getElementById('swap-button').addEventListener('click', function() {
     // Swap "14" and "15" in the puzzle array
-    var temp = puzzle[3][2];
-    puzzle[3][2] = puzzle[3][3];
-    puzzle[3][3] = temp;
+    var temp = puzzle[3][1];
+    puzzle[3][1] = puzzle[3][2];
+    puzzle[3][2] = temp;
     updatePuzzlePieces();
 });
