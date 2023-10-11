@@ -5,20 +5,6 @@ var puzzle = [
     [13, 14, 15, 16]
 ];
 
-var puzzle15 = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16]
-];
-
-var puzzle14 = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 15, 14, 16]
-];
-
 function shufflePuzzle() {
     var flatPuzzle = puzzle.flat();
     for (let i = flatPuzzle.length - 1; i > 0; i--) {
@@ -116,15 +102,25 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
 
 document.getElementById('puzzle14-button').addEventListener('click', function() {
-    // Swap "14" and "15" in the puzzle array
-    puzzle = puzzle14;
+    // Swap "14" and "15" in the original puzzle
+    puzzle = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 15, 14, 16]
+    ];
     updatePuzzlePieces();
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
 document.getElementById('start-button').addEventListener('click', function() {
     // Reload the original starting puzzle
-    puzzle = puzzle15;
+    puzzle = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16]
+    ];
     updatePuzzlePieces();
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
