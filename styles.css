@@ -28,3 +28,10 @@
     color: #fff;
     border: none;
 }
+    #parity-display {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.5em;
+        color: #000;
+    }
