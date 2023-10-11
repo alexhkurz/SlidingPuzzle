@@ -59,7 +59,6 @@ function updatePuzzlePieces() {
         }
     }
 }
-}
 
 var dragging = false;
 var draggedPiece = null;
