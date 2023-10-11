@@ -110,7 +110,19 @@ document.getElementById('shuffle-button').addEventListener('click', shufflePuzzl
 
 document.getElementById('puzzle-14').addEventListener('click', function() {
     // Swap "14" and "15" in the puzzle array
-    puzzle = puzzle14
+    puzzle = puzzle14;
+    updatePuzzlePieces();
+    document.getElementById('parity-display').textContent = getParity(puzzle);
+});
+
+document.getElementById('start-button').addEventListener('click', function() {
+    // Reload the original starting puzzle
+    puzzle = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16]
+    ];
     updatePuzzlePieces();
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
