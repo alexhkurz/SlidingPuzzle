@@ -45,8 +45,8 @@ function movePiece(piece) {
 
 function updatePuzzlePieces() {
     var pieces = document.getElementsByClassName('puzzle-piece');
-    for (var i = 0; i < pieces.length; i++) {
-        var piece = pieces[i];
+    for (var x = 0; x < pieces.length; x++) {
+        var piece = pieces[x];
         var pieceNumber = parseInt(piece.textContent);
         for (var i = 0; i < 4; i++) {
             for (var j = 0; j < 4; j++) {
