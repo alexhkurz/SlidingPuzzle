@@ -36,10 +36,29 @@ function movePiece(piece) {
     if (Math.abs(piecePosition.i - emptyTilePosition.i) + Math.abs(piecePosition.j - emptyTilePosition.j) === 1) {
         puzzle[piecePosition.i][piecePosition.j] = 0;
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
+        updatePuzzlePieces();
         return true;
     }
 
     return false;
+}
+
+function updatePuzzlePieces() {
+    var pieces = document.getElementsByClassName('puzzle-piece');
+    for (var i = 0; i < pieces.length; i++) {
+        var piece = pieces[i];
+        var pieceNumber = parseInt(piece.textContent);
+        for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                if (puzzle[i][j] === pieceNumber) {
+                    piece.style.left = (j * 100) + 'px';
+                    piece.style.top = (i * 100) + 'px';
+                    break;
+                }
+            }
+        }
+    }
+}
 }
 
 var dragging = false;
