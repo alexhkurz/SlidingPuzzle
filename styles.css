@@ -17,9 +17,9 @@
 }
 
 .button-row {
-    display: flex;
+    display: block;
     height: 50px; /* or whatever height you want */
-    justify-content: center;
+    text-align: center;
     margin-top: 20px;
 }
 
