@@ -121,11 +121,27 @@ document.getElementById('swap-button').addEventListener('click', function() {
     puzzle[3][2] = temp;
     updatePuzzlePieces();
 });
+
+/*
 function getParity(pieces) {
     var inversions = 0;
     for (var i = 0; i < pieces.length - 1; i++) {
         for (var j = i + 1; j < pieces.length; j++) {
             if (pieces[i] > pieces[j] && pieces[i] != 0 && pieces[j] != 0) {
+                inversions++;
+            }
+        }
+    }
+    return inversions % 2;
+}
+*/
+
+function getParity(puzzle) {
+    var inversions = 0;
+    var flatPuzzle = puzzle.flat();
+    for (var i = 0; i < flatPuzzle.length - 1; i++) {
+        for (var j = i + 1; j < flatPuzzle.length; j++) {
+            if (flatPuzzle[i] > flatPuzzle[j] && flatPuzzle[i] != 0 && flatPuzzle[j] != 0) {
                 inversions++;
             }
         }

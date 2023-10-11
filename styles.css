@@ -19,8 +19,8 @@
 .button-row {
     display: block;
     height: 50px; /* or whatever height you want */
-    text-align: center;
-    margin-top: 50px; /* Increase this value to move the button further down */
+    text-align: left;
+    margin-top: 100px; /* Increase this value to move the button further down */
 }
 
 .blank-tile {
