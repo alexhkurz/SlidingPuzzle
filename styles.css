@@ -16,9 +16,12 @@
     background-color: #ccc;
 }
 
-#shuffle-button {
-    margin-top: 20px;
+.button-row {
+    display: flex;
+    height: 50px; /* or whatever height you want */
+    justify-content: flex-start;
 }
+
 .blank-tile {
     background-color: #fff;
     color: #fff;
