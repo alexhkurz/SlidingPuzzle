@@ -107,3 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
+document.getElementById('swap-button').addEventListener('click', function() {
+    // Swap "14" and "15" in the puzzle array
+    var temp = puzzle[3][2];
+    puzzle[3][2] = puzzle[3][3];
+    puzzle[3][3] = temp;
+    updatePuzzlePieces();
+});
