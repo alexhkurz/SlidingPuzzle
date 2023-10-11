@@ -141,9 +141,11 @@ function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
     for (var i = 0; i < flatPuzzle.length - 1; i++) {
-        for (var j = i + 1; j < flatPuzzle.length; j++) {
-            if (flatPuzzle[i] > flatPuzzle[j] && flatPuzzle[i] != 0 && flatPuzzle[j] != 0) {
-                inversions++;
+        if (flatPuzzle[i] != 0) {
+            for (var j = i + 1; j < flatPuzzle.length; j++) {
+                if (flatPuzzle[j] != 0 && flatPuzzle[i] > flatPuzzle[j]) {
+                    inversions++;
+                }
             }
         }
     }
