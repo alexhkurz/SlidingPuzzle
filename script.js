@@ -81,6 +81,10 @@ var dragging = false;
 var draggedPiece = null;
 
 document.addEventListener('DOMContentLoaded', function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('puzzle') === '14') {
+        puzzle = puzzle14;
+    }
     var container = document.getElementById('puzzle-container');
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
