@@ -21,6 +21,7 @@ function shufflePuzzle() {
     puzzle = [];
     while(flatPuzzle.length) puzzle.push(flatPuzzle.splice(0,4));
     updatePuzzlePieces();
+    document.getElementById('parity-display').textContent = getParity(puzzle);
 }
 
 function getEmptyTilePosition() {
@@ -51,12 +52,14 @@ function movePiece(piece) {
         puzzle[piecePosition.i][piecePosition.j] = 0;
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
         updatePuzzlePieces();
+        document.getElementById('parity-display').textContent = getParity(puzzle);
         return true;
     }
 
     return false;
 }
 
+// moving each piece to its correct position
 function updatePuzzlePieces() {
     var pieces = document.getElementsByClassName('puzzle-piece');
     for (var x = 0; x < pieces.length; x++) {
@@ -72,7 +75,6 @@ function updatePuzzlePieces() {
             }
         }
     }
-    document.getElementById('parity-display').textContent = getParity(puzzle);
 }
 
 var dragging = false;
@@ -97,30 +99,18 @@ document.addEventListener('DOMContentLoaded', function() {
             container.appendChild(piece);
         }
     }
-
-    container.addEventListener('mousemove', function(e) {
-        if (dragging) {
-            draggedPiece.style.left = e.pageX - container.offsetLeft - 50 + 'px';
-            draggedPiece.style.top = e.pageY - container.offsetTop - 50 + 'px';
-        }
-    });
-
-    container.addEventListener('mouseup', function() {
-        if (dragging) {
-            movePiece(draggedPiece);
-            dragging = false;
-            draggedPiece = null;
-        }
-    });
+    document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
+
 document.getElementById('swap-button').addEventListener('click', function() {
     // Swap "14" and "15" in the puzzle array
     var temp = puzzle[3][1];
     puzzle[3][1] = puzzle[3][2];
     puzzle[3][2] = temp;
     updatePuzzlePieces();
+    document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
 /*
