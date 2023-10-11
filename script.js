@@ -49,7 +49,7 @@ function movePiece(piece) {
     }
 
     if (Math.abs(piecePosition.i - emptyTilePosition.i) + Math.abs(piecePosition.j - emptyTilePosition.j) === 1) {
-        puzzle[piecePosition.i][piecePosition.j] = 0;
+        puzzle[piecePosition.i][piecePosition.j] = 16;
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
         updatePuzzlePieces();
         document.getElementById('parity-display').textContent = getParity(puzzle);
@@ -131,9 +131,9 @@ function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
     for (var i = 0; i < flatPuzzle.length - 1; i++) {
-        if (flatPuzzle[i] != 0) {
+        if (flatPuzzle[i] != 16) {
             for (var j = i + 1; j < flatPuzzle.length; j++) {
-                if (flatPuzzle[j] != 0 && flatPuzzle[i] > flatPuzzle[j]) {
+                if (flatPuzzle[j] != 16 && flatPuzzle[i] > flatPuzzle[j]) {
                     inversions++;
                 }
             }
