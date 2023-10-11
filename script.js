@@ -6,7 +6,14 @@ var puzzle = [
 ];
 
 function shufflePuzzle() {
-    // Code to shuffle the puzzle will go here
+    var flatPuzzle = puzzle.flat();
+    for (let i = flatPuzzle.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [flatPuzzle[i], flatPuzzle[j]] = [flatPuzzle[j], flatPuzzle[i]];
+    }
+    puzzle = [];
+    while(flatPuzzle.length) puzzle.push(flatPuzzle.splice(0,4));
+    updatePuzzlePieces();
 }
 
 function getEmptyTilePosition() {
