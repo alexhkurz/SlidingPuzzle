@@ -2,14 +2,14 @@ var puzzle = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
-    [13, 14, 15, 0]
+    [13, 14, 15, 16]
 ];
 
 var puzzle14 = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
-    [13, 15, 14, 0]
+    [13, 15, 14, 16]
 ];
 
 function shufflePuzzle() {
@@ -27,7 +27,7 @@ function shufflePuzzle() {
 function getEmptyTilePosition() {
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
-            if (puzzle[i][j] === 0) {
+            if (puzzle[i][j] === 16) {
                 return { i: i, j: j };
             }
         }
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (var j = 0; j < 4; j++) {
             var piece = document.createElement('div');
             piece.classList.add('puzzle-piece');
-            if (puzzle[i][j] === 0) {
+            if (puzzle[i][j] === 16) {
                 piece.classList.add('blank-tile');
             }
             piece.textContent = puzzle[i][j];
