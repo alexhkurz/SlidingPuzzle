@@ -5,6 +5,13 @@ var puzzle = [
     [13, 14, 15, 16]
 ];
 
+var puzzle15 = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+];
+
 var puzzle14 = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
@@ -108,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
 
-document.getElementById('puzzle-14').addEventListener('click', function() {
+document.getElementById('puzzle14-button').addEventListener('click', function() {
     // Swap "14" and "15" in the puzzle array
     puzzle = puzzle14;
     updatePuzzlePieces();
@@ -117,12 +124,7 @@ document.getElementById('puzzle-14').addEventListener('click', function() {
 
 document.getElementById('start-button').addEventListener('click', function() {
     // Reload the original starting puzzle
-    puzzle = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 16]
-    ];
+    puzzle = puzzle15;
     updatePuzzlePieces();
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
