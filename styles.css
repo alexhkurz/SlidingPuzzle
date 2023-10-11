@@ -35,4 +35,6 @@
     left: 10px; /* Adjust this value to move the element closer to the puzzle container */
     font-size: 1.5em;
     color: #ff0000; /* Change the color to red */
+    background-color: #ffffff; /* Add a white background */
+    border: 1px solid #000000; /* Add a black border */
 }
