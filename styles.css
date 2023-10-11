@@ -34,7 +34,6 @@
     top: 0;
     left: 400px; /* Adjust this value to move the element further to the right */
     font-size: 1.5em;
-    color: #ff0000; /* Change the color to red */
-    background-color: #ffffff; /* Add a white background */
-    border: 1px solid #000000; /* Add a black border */
+    color: #000000; /* Change the color to red */
+    //background-color: #ffffff; /* Add a white background */
 }

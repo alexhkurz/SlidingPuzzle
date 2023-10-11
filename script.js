@@ -104,11 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('shuffle-button').addEventListener('click', shufflePuzzle);
 
-document.getElementById('swap-button').addEventListener('click', function() {
+document.getElementById('puzzle-14').addEventListener('click', function() {
     // Swap "14" and "15" in the puzzle array
-    var temp = puzzle[3][1];
-    puzzle[3][1] = puzzle[3][2];
-    puzzle[3][2] = temp;
+    puzzle = puzzle14
     updatePuzzlePieces();
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
