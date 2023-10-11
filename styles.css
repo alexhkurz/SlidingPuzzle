@@ -32,7 +32,7 @@
 #parity-display {
     position: absolute;
     top: 0;
-    right: 2000;
+    right: 0;
     font-size: 1.5em;
     color: #000;
 }
