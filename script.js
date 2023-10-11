@@ -72,7 +72,7 @@ function updatePuzzlePieces() {
             }
         }
     }
-    document.getElementById('parity-display').textContent = "Parity: " + getParity(puzzle);
+    document.getElementById('parity-display').textContent = getParity(puzzle);
 }
 
 var dragging = false;
