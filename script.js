@@ -36,10 +36,6 @@ function movePiece(piece) {
     if (Math.abs(piecePosition.i - emptyTilePosition.i) + Math.abs(piecePosition.j - emptyTilePosition.j) === 1) {
         puzzle[piecePosition.i][piecePosition.j] = 0;
         puzzle[emptyTilePosition.i][emptyTilePosition.j] = pieceNumber;
-        piece.style.left = (emptyTilePosition.j * 100) + 'px';
-        piece.style.top = (emptyTilePosition.i * 100) + 'px';
-        document.querySelector(`.puzzle-piece:nth-child(${emptyTilePosition.i * 4 + emptyTilePosition.j + 1})`).textContent = pieceNumber;
-        piece.textContent = '';
         return true;
     }
 
