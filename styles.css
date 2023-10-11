@@ -19,7 +19,8 @@
 .button-row {
     display: flex;
     height: 50px; /* or whatever height you want */
-    justify-content: flex-start;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .blank-tile {
