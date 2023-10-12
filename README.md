@@ -1,6 +1,6 @@
 # Sliding Puzzle
 
-Go to [SlidingPuzzle](https://alexhkurz.github.io/SlidingPuzzle/), click on Shuffle and try to solve the puzzle by bringing it back to the starting position.
+To play the puzzle head over to [SlidingPuzzle](https://alexhkurz.github.io/SlidingPuzzle/).
 
 <!--Some puzzles have solutions, others don't.
 
