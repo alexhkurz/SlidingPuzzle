@@ -132,20 +132,6 @@ document.getElementById('start-button').addEventListener('click', function() {
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
-/*
-function getParity(pieces) {
-    var inversions = 0;
-    for (var i = 0; i < pieces.length - 1; i++) {
-        for (var j = i + 1; j < pieces.length; j++) {
-            if (pieces[i] > pieces[j] && pieces[i] != 0 && pieces[j] != 0) {
-                inversions++;
-            }
-        }
-    }
-    return inversions % 2;
-}
-*/
-
 function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
