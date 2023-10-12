@@ -76,7 +76,14 @@ var draggedPiece = null;
 document.addEventListener('DOMContentLoaded', function() {
     var urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('puzzle') === '14') {
-        puzzle = puzzle14;
+        puzzle = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 15, 14, 16]
+        ];
+        updatePuzzlePieces();
+        document.getElementById('parity-display').textContent = getParity(puzzle);
     }
     var container = document.getElementById('puzzle-container');
     for (var i = 0; i < 4; i++) {
