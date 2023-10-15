@@ -54,8 +54,11 @@ body {
     color: #000000; /* Change the color to red */
     //background-color: #ffffff; /* Add a white background */
 }
-button, div {
+button {
     margin: 0;
     padding: 0;
+}
+div {
+    margin: 0;
     line-height: 1;
 }
