@@ -25,9 +25,8 @@
 }
 
 .my-shuffle-group {
-    display: inline-block;
+    display: block;
     padding: 10px;
-    border: 2px solid #000;
 }
 
 #my-shuffle-input {
