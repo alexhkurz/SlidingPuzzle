@@ -6,24 +6,33 @@
 </head>
 <body>
     <div id="main_container">
+        <h1>Sliding Puzzle</h1>
+        <div id="instructions">
+            <p>
+                <details>
+                    <summary>Instructions</summary>
+                    <p>Shuffle the pieces and try to bring the puzzle back to Goal.</p>
+                    <p>To slide a piece click it.</p>
+                    <p>Some shuffles will have solutions, others don't. <b>Can you tell which?</b></p>
+                    <p>To investigate this question, you can also make your own shuffles.</p>
+                    <!--p>Some puzzles have solutions, others don't. Can you tell which?</p-->
+                </details>
+            </p>
+        </div>
         <div id="puzzle-container">
             <!-- Puzzle pieces will be added here by script.js -->
             <div id="parity-display"></div>
         </div>
-        <div id="button-row">
+        <div id="shuffle-row">
             <button id="start-button">Goal</button>
             <button id="shuffle-button">Shuffle</button>
             <button id="puzzle14-button">14</button>
         </div>
-        <div id="my-shuffle-group">
-            <button id="my-shuffle-button">My Shuffle</button>
-            <input id="my-shuffle-input" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,15,13,14,_" size="35">
+        <div id="my-shuffle-row">
+            <button id="my-shuffle-button">My Shuffle: </button>
+            <input id="my-shuffle-input" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,_" size="35">
         </div>
-        <div>
-            <p>Shuffle and try to bring the puzzle back to Goal by sliding the pieces.</p>
-            <!--p>Some puzzles have solutions, others don't. Can you tell which?</p-->
-        </div>
-        <div>
+        <div id="view-source">
             <p>
                 <a href="https://github.com/alexhkurz/SlidingPuzzle" target="_blank">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="20"   height="20"></a>
