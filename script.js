@@ -139,6 +139,15 @@ document.getElementById('my-shuffle-button').addEventListener('click', function(
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
+function parseInputToPuzzle(input) {
+    var flatPuzzle = input.split(',').map(function(item) {
+        return item === '_' ? 16 : parseInt(item);
+    });
+    var puzzle = [];
+    while(flatPuzzle.length) puzzle.push(flatPuzzle.splice(0,4));
+    return puzzle;
+}
+
 function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
