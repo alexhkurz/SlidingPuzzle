@@ -132,6 +132,13 @@ document.getElementById('start-button').addEventListener('click', function() {
     document.getElementById('parity-display').textContent = getParity(puzzle);
 });
 
+document.getElementById('my-shuffle-button').addEventListener('click', function() {
+    var input = document.getElementById('my-shuffle-input').value;
+    puzzle = parseInputToPuzzle(input);
+    updatePuzzlePieces();
+    document.getElementById('parity-display').textContent = getParity(puzzle);
+});
+
 function getParity(puzzle) {
     var inversions = 0;
     var flatPuzzle = puzzle.flat();
