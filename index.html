@@ -5,30 +5,31 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="puzzle-container">
-        <!-- Puzzle pieces will be added here by script.js -->
-        <div id="parity-display"></div>
+    <div id="main_container">
+        <div id="puzzle-container">
+            <!-- Puzzle pieces will be added here by script.js -->
+            <div id="parity-display"></div>
+        </div>
+        <div id="button-row">
+            <button id="start-button">Goal</button>
+            <button id="shuffle-button">Shuffle</button>
+            <button id="puzzle14-button">14</button>
+        </div>
+        <div id="my-shuffle-group">
+            <button id="my-shuffle-button">My Shuffle</button>
+            <input id="my-shuffle-input" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,15,13,14,_">
+        </div>
+        <div>
+            <p>Shuffle and try to bring the puzzle back to Goal by sliding the pieces.</p>
+            <!--p>Some puzzles have solutions, others don't. Can you tell which?</p-->
+        </div>
+        <div>
+            <p>
+                <a href="https://github.com/alexhkurz/SlidingPuzzle" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="20"   height="20"></a>
+            </p>
+        </div>
     </div>
-    <div class="button-row">
-        <button id="start-button">Goal</button>
-        <button id="shuffle-button">Shuffle</button>
-        <button id="puzzle14-button">14</button>
-    </div>
-    <div class="my-shuffle-group">
-        <button id="my-shuffle-button">My Shuffle</button>
-        <input id="my-shuffle-input" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,_">
-    </div>
-    <div>
-        <p>Shuffle and try to bring the puzzle back to Goal by sliding the pieces.</p>
-        <!--p>Some puzzles have solutions, others don't. Can you tell which?</p-->
-    </div>
-    <div>
-        <p>
-            <a href="https://github.com/alexhkurz/SlidingPuzzle" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="20" height="20"></a>
-        </p>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
