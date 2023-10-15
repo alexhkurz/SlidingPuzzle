@@ -27,7 +27,6 @@ body {
 
 #button-row {
     display: block;
-    height: 50px; /* or whatever height you want */
     text-align: left;
     margin-top: 100px; /* Increase this value to move the button further down */
 }
@@ -54,4 +53,9 @@ body {
     font-size: 1.5em;
     color: #000000; /* Change the color to red */
     //background-color: #ffffff; /* Add a white background */
+}
+button, div {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
