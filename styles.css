@@ -6,6 +6,13 @@ body {
     flex-direction: column;
 }
 
+#main_container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 #puzzle-container {
     display: flex;
     width: 300px;
@@ -25,28 +32,6 @@ body {
     background-color: #ccc;
 }
 
-.row {
-    height: 2rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-}
-
-#button-row {
-    display: block;
-    text-align: left;
-}
-
-#my-shuffle-group {
-    text-align: left;
-}
-
-#my-shuffle-input {
-    /* width property removed */
-}
-
 .blank-tile {
     background-color: #fff;
     color: #fff;
@@ -59,13 +44,6 @@ body {
     left: 400px; /* Adjust this value to move the element further to the right */
     font-size: 1.5em;
     color: #000000; /* Change the color to red */
-    //background-color: #ffffff; /* Add a white background */
+    background-color: #ffffff; /* Add a white background */
 }
-button {
-    margin: 0;
-    padding: 0;
-}
-div {
-    margin: 0;
-    line-height: 1;
-}
+
