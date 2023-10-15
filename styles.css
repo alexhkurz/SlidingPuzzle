@@ -25,15 +25,22 @@ body {
     background-color: #ccc;
 }
 
+.row {
+    height: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
 #button-row {
     display: block;
     text-align: left;
-    margin-top: 100px; /* Increase this value to move the button further down */
 }
 
 #my-shuffle-group {
-    display: block;
-    padding: 10px;
+    text-align: left;
 }
 
 #my-shuffle-input {
