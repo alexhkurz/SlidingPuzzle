@@ -47,3 +47,17 @@ body {
     background-color: #ffffff; /* Add a white background */
 }
 
+#shuffle-row, #my-shuffle-row {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+#shuffle-row, #my-shuffle-row {
+    width: 300px; /* Adjust this value to match the width of the puzzle */
+    margin: 0 auto; /* This will center the rows if the parent is wider */
+}
+#shuffle-row {
+    order: 2; /* Adjust this value as needed */
+}
+
+#my-shuffle-row {
+    order: 3; /* Adjust this value as needed */
+}
