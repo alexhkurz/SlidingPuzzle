@@ -6,18 +6,30 @@ body {
     flex-direction: column;
 }
 
+#instructions {
+    display: flex;
+    flex-direction: start;
+    width: 400px;
+}
+
 #main_container {
     height: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 #puzzle-container {
     display: flex;
-    width: 300px;
-    height: 300px;
+    justify-content: start;
+    width: fit-content;
+    min-height: 400px;
+    height: 400px;
     position: relative;
+    transform: translateX(-200px)
 }
 
 .puzzle-piece {
@@ -25,39 +37,49 @@ body {
     height: 90px;
     position: absolute;
     border: 5px solid #000;
+    border-radius: 5px;
     box-sizing: border-box;
     line-height: 90px;
     text-align: center;
     font-size: 2em;
     background-color: #ccc;
+    cursor: pointer;
 }
 
 .blank-tile {
     background-color: #fff;
     color: #fff;
     border: none;
+    cursor: default;
 }
 
 #parity-display {
     position: absolute;
     top: 0;
-    left: 400px; /* Adjust this value to move the element further to the right */
+    left: 400px;
+    /* Adjust this value to move the element further to the right */
     font-size: 1.5em;
-    color: #000000; /* Change the color to red */
-    background-color: #ffffff; /* Add a white background */
+    color: #000000;
+    /* Change the color to red */
+    background-color: #ffffff;
+    /* Add a white background */
 }
 
 #shuffle-row {
-    margin-top: 210px; /* Adjust this value as needed */
-    order: 2; /* Adjust this value as needed */
+    order: 2;
+    /* Adjust this value as needed */
 }
 
 #my-shuffle-row {
-    margin-top: 10px; /* Adjust this value as needed */
-    order: 3; /* Adjust this value as needed */
+    margin-top: 10px;
+    /* Adjust this value as needed */
+    order: 3;
+    /* Adjust this value as needed */
 }
 
-#view-source{
-    margin-top: 10px; /* Adjust this value as needed */
-    order: 4; /* Adjust this value as needed */
+#view-source {
+    margin-top: 10px;
+    /* Adjust this value as needed */
+    order: 4;
+    /* Adjust this value as needed */
 }
