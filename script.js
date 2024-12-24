@@ -163,3 +163,50 @@ function getParity(puzzle) {
     }
     return (inversions + blankTileRow) % 2;
 }
+
+document.addEventListener('keydown', function(event) {
+    const emptyPos = getEmptyTilePosition();
+    let pieceToMove = null;
+
+    switch(event.key) {
+        case 'ArrowUp':
+            // Move piece below empty space up (empty space moves down)
+            if (emptyPos.i < 3) {
+                pieceToMove = findPieceAtPosition(emptyPos.i + 1, emptyPos.j);
+            }
+            break;
+        case 'ArrowDown':
+            // Move piece above empty space down (empty space moves up)
+            if (emptyPos.i > 0) {
+                pieceToMove = findPieceAtPosition(emptyPos.i - 1, emptyPos.j);
+            }
+            break;
+        case 'ArrowLeft':
+            // Move piece to right of empty space left (empty space moves right)
+            if (emptyPos.j < 3) {
+                pieceToMove = findPieceAtPosition(emptyPos.i, emptyPos.j + 1);
+            }
+            break;
+        case 'ArrowRight':
+            // Move piece to left of empty space right (empty space moves left)
+            if (emptyPos.j > 0) {
+                pieceToMove = findPieceAtPosition(emptyPos.i, emptyPos.j - 1);
+            }
+            break;
+    }
+
+    if (pieceToMove) {
+        movePiece(pieceToMove);
+    }
+});
+
+function findPieceAtPosition(i, j) {
+    const number = puzzle[i][j];
+    const pieces = document.getElementsByClassName('puzzle-piece');
+    for (let piece of pieces) {
+        if (parseInt(piece.textContent) === number) {
+            return piece;
+        }
+    }
+    return null;
+}
